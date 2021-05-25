@@ -124,10 +124,6 @@ nav {
     background-color:#fff;
 }
 
-.active {
-    transform: translateX(0%);
-}
-
 /*------Sections------*/
 
 /*------Main Section------*/
@@ -499,7 +495,7 @@ nav {
         position: absolute;
         top: 13vh;
         transform: translateX(-100%);
-        background-color: #3072DA;
+        background-color: #6d64ff;
         height: 92vh;
         width: 100%;
         align-items: center;
@@ -509,13 +505,10 @@ nav {
 
     .nav__links {
         flex-direction: column;
-        align-items: space-between;
-        text-align: center;
-        justify-content: center;
-    }
-
-    .nav__links li {
-        padding: 100px 0;
+        height: 100%;
+        align-items: space-between; 
+        text-align: center; 
+        justify-content: space-around;
     }
 
     .nav__links:first-child {
@@ -537,8 +530,7 @@ nav {
     }
 
     .logo-scrolled {
-        background-color: #000000;
-        color: white;
+        color: #000000;
     }
 
     .navbar-active-scrolled {

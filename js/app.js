@@ -1,8 +1,8 @@
-/*Brand*/
+/*---------------Brand---------------*/
 
 document.getElementById('tags').innerText = "</>"
 
-/*Element get*/
+/*---------------Element get---------------*/
 
 const burger = document.querySelector('.burger');
 const navbar = document.querySelector('#navbar');
@@ -12,7 +12,7 @@ const logo = document.querySelector('.logo');
 const mainh1 = document.querySelector('.main-section h1');
 const typingP = document.querySelector('.typing');
 
-/*Animating Main H1*/
+/*---------------Animating Main H1---------------*/
 
 setInterval(()=>{
     if (mainh1.innerText == "Josmanuel Sandrea"){
@@ -24,7 +24,7 @@ setInterval(()=>{
     }
 },500)
 
-/*Animating <p> in Main*/
+/*---------------Animating <p> in Main---------------*/
 
 var iterator = 0;
 var txt = "Web Developer";
@@ -39,19 +39,33 @@ function typeAnimation(){
 
 typeAnimation();
 
-/*Burger Script for Responsive Design*/
+/*---------------Burger Script for Responsive Design---------------*/
+
+var burgerOn = false;
+
+links.forEach((link)=>{
+    link.addEventListener('click', ()=>{
+        if (burgerOn){
+            burgerOn = false;
+            burger.classList.remove('burger-active');
+            navbar.style.transform = "translateX(-100%)";
+        }
+    });
+});
 
 burger.addEventListener('click', ()=>{
     if (burger.classList.contains('burger-active')){
+        burgerOn = false;
         burger.classList.remove('burger-active');
         navbar.style.transform = "translateX(-100%)";
     }else{
+        burgerOn = true;
         burger.classList.add('burger-active');
         navbar.style.transform = "translateX(0%)";
     }
 });
 
-/*Header animation when scrolling down*/
+/*---------------Header animation when scrolling down---------------*/
 
 window.addEventListener('scroll', ()=>{
     if (navbar.classList.contains('navbar-scrolled')){
