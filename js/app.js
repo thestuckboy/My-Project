@@ -11,6 +11,7 @@ const links = document.querySelectorAll('.links');
 const logo = document.querySelector('.logo');
 const mainh1 = document.querySelector('.main-section h1');
 const typingP = document.querySelector('.typing');
+const goup = document.querySelector('.go-up');
 
 /*---------------Animating Main H1---------------*/
 
@@ -100,5 +101,9 @@ window.addEventListener('scroll', ()=>{
         if (burger.classList.contains('burger-scrolled')){
             burger.classList.remove('burger-scrolled');
         }
+        goup.style.opacity = "0";
+    }
+    if (window.scrollY > 0) {
+        goup.style.opacity = "1";
     }
 });
